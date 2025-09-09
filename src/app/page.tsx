@@ -1,7 +1,9 @@
+import Hero from "@/components/Hero";
+
 const HomePage = () => {
   return (
-    <main>
-      <div>HomePage</div>
+    <main className="max-w-6xl mx-auto px-4">
+      <Hero />
     </main>
   );
 };

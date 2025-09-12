@@ -1,33 +1,58 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const Hero = () => {
   return (
     <section
-      id="about"
-      className="flex flex-col justify-center items-center py-20 min-h-screen"
+      id="hero"
+      className="relative flex flex-col justify-center items-center md:items-baseline min-h-screen"
     >
-      <h2 className="text-5xl font-extrabold">Jeon Sangmin</h2>
-      <p className="mt-3 text-xl text-gray-600">Front-End Developer</p>
+      {/* 배경 이미지 */}
+      <Image
+        src="/images/Hero.jpg"
+        alt="Developer"
+        fill
+        className="object-cover"
+        priority
+      />
+      <div className="absolute inset-0 bg-black/60" />
 
-      <div className="mt-6 flex flex-col gap-2 items-center">
-        <p>📱 010-4764-5224</p>
-        <p>📧 devJsonMin@gmail.com</p>
-        <Link
-          href="https://github.com/venise5224"
-          target="_blank"
-          rel="noreferrer"
-          className="text-blue-600 hover:underline"
-        >
-          GitHub
-        </Link>
+      {/* 텍스트 부분 */}
+      <div className="px-8 md:ml-20 z-1">
+        <h2 className="text-5xl md:text-8xl font-extrabold text-yellow-600">
+          Front-End Developer
+        </h2>
+        <p className="mt-4 text-2xl md:text-5xl font-semibold text-gray-400">
+          Jeon SangMin
+        </p>
+        <p className="mt-12 text-lg md:text-2xl text-white">
+          사용자 경험을 최우선으로 생각하며, <br />
+          깔끔하고 가독성 좋은 코드를 작성하는 개발자입니다.
+        </p>
+        <p className="mt-4 text-lg md:text-2xl text-white">
+          성장의 재미를 느끼며, 문제 해결을 통해 가치 있는 경험을 창출합니다.
+        </p>
+
+        <div className="mt-10">
+          <Link
+            href="#projects"
+            className="px-6 py-3 bg-yellow-600 text-black font-bold text-lg md:text-2xl rounded-lg border-1 border-white hover:bg-yellow-500"
+          >
+            프로젝트 보기
+          </Link>
+        </div>
       </div>
 
-      <Link
-        href="#projects"
-        className="mt-8 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500 transition-colors"
-      >
-        See Projects
-      </Link>
+      {/* 이미지 부분 */}
+      {/* <div className="mt-8 md:mt-0 md:w-1/2 flex justify-center">
+        <Image
+          src="/images/Hero.jpg"
+          alt="Developer Image"
+          width={400}
+          height={400}
+          className="w-full max-w-md rounded-lg shadow-lg"
+        />
+      </div> */}
     </section>
   );
 };

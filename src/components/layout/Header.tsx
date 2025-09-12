@@ -9,11 +9,14 @@ const navItems = [
 
 export default function Header() {
   return (
-    <header className="fixed left-0 right-0 z-50 border-b">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b bg-black">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* 로고 */}
         <h1>
-          <Link href="/" className="text-lg font-bold hover:opacity-80">
+          <Link
+            href="/"
+            className="text-lg font-bold hover:opacity-80 text-white"
+          >
             Dev.JsonMin
           </Link>
         </h1>
@@ -21,9 +24,13 @@ export default function Header() {
         {/* 네비게이션 */}
         <nav className="flex gap-6 text-sm font-medium">
           {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className="relative group">
+            <Link
+              key={item.href}
+              href={item.href}
+              className="relative group text-white"
+            >
               {item.label}
-              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-yellow-500 group-hover:w-full transition-all duration-300"></span>
             </Link>
           ))}
         </nav>

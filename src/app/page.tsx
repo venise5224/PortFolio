@@ -5,7 +5,7 @@ import Skill from "@/components/Skill";
 
 const HomePage = () => {
   return (
-    <main className="max-w-6xl mx-auto px-4">
+    <main>
       <Hero />
       <Skill />
       <Project />

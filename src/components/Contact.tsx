@@ -1,35 +1,51 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const Contact = () => {
   return (
     <section
       id="contact"
-      className="flex flex-col justify-center items-center py-20 min-h-screen"
+      className="relative flex flex-col justify-center items-center py-20 min-h-screen"
     >
-      <h2 className="text-4xl font-bold">Contact Me</h2>
-      <p className="mt-4 text-lg text-gray-600 text-center">
-        프로젝트 문의, 협업 요청 등 언제든지 연락주세요!
-      </p>
+      {/* 배경 이미지 */}
+      <Image
+        src="/images/Contact_background.jpg"
+        alt="contact"
+        fill
+        className="object-cover"
+        priority
+      />
+      <div className="absolute inset-0 bg-black/60" />
 
-      <div className="mt-8 flex flex-col gap-3 items-center">
-        <p>📞 전화번호: 010-4764-5224</p>
-        <p>📧 이메일: devJsonMin@gmail.com</p>
+      {/* Contact Contents */}
+      <div className="relative flex flex-col justify-center items-center text-white px-6">
+        <h2 className="text-5xl md:text-8xl font-extrabold text-yellow-600">
+          Contact Me
+        </h2>
+        <p className="mt-8 text-lg md:text-2xl font-semibold text-gray-400">
+          프로젝트 관련 문의나 채용 관련 연락을 환영합니다.
+        </p>
+
+        <div className="mt-12 flex flex-col gap-4 items-start text-lg md:text-2xl text-white">
+          <p className="font-extrabold">
+            TEL <br />
+            010-4764-5224
+          </p>
+          <p className="font-extrabold">
+            EMAIL <br />
+            devJsonMin@gmail.com
+          </p>
+        </div>
+
         <Link
           href="https://github.com/venise5224"
           target="_blank"
           rel="noreferrer"
-          className="text-blue-600 hover:underline"
+          className="mt-8 px-6 py-3 bg-yellow-600 text-black font-extrabold text-lg md:text-2xl rounded-lg border-1 border-white hover:bg-yellow-500"
         >
           GitHub 프로필
         </Link>
       </div>
-
-      <Link
-        href="mailto:devJsonMin@gmail.com"
-        className="mt-8 px-5 py-2 bg-blue-600 text-white rounded hover:bg-blue-500 transition-colors"
-      >
-        이메일 보내기
-      </Link>
     </section>
   );
 };

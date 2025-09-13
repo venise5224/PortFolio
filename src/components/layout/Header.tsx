@@ -15,14 +15,14 @@ export default function Header() {
         <h1>
           <Link
             href="/"
-            className="text-lg font-bold hover:opacity-80 text-white"
+            className="text-lg md:text-xl font-bold hover:opacity-80 text-white"
           >
             Dev.JsonMin
           </Link>
         </h1>
 
         {/* 네비게이션 */}
-        <nav className="flex gap-6 text-sm font-medium">
+        <nav className="flex gap-4 md:gap-6 text-[12px] md:text-sm font-medium">
           {navItems.map((item) => (
             <Link
               key={item.href}

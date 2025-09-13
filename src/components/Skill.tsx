@@ -43,7 +43,7 @@ const Skill = () => {
       />
       <div className="absolute inset-0 bg-black/60" />
 
-      <h2 className="relative text-5xl md:text-8xl font-extrabold text-yellow-600 ">
+      <h2 className="relative text-5xl md:text-8xl font-extrabold text-yellow-600">
         Skills
       </h2>
 

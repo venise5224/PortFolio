@@ -4,7 +4,7 @@ const Skill = () => {
   const skills = {
     Languages: [
       { name: "HTML", img: "/icons/html.png" },
-      { name: "CSS (Tailwind CSS, Module CSS)", img: "/icons/css.png" },
+      { name: "CSS", img: "/icons/css.png" },
       { name: "JavaScript", img: "/icons/javascript.png" },
       { name: "TypeScript", img: "/icons/typescript.png" },
     ],
@@ -31,29 +31,50 @@ const Skill = () => {
   return (
     <section
       id="skill"
-      className="flex flex-col justify-center items-center py-20 min-h-screen"
+      className="relative flex flex-col justify-center items-center min-h-screen"
     >
-      <h2 className="text-3xl font-bold text-center mb-12">Skills</h2>
+      {/* 배경 이미지 */}
+      <Image
+        src="/images/Skill_background.jpg"
+        alt="skills"
+        fill
+        className="object-cover"
+        priority
+      />
+      <div className="absolute inset-0 bg-black/60" />
 
-      <div className="flex flex-col justify-center gap-6 w-full">
+      <h2 className="relative text-5xl md:text-8xl font-extrabold text-yellow-600 ">
+        Skills
+      </h2>
+
+      <div className="relative mt-8 flex flex-col gap-6 w-full max-w-6xl md:px-10">
         {Object.entries(skills).map(([category, items]) => (
           <div
             key={category}
-            className="flex items-center min-w-full max-w-sm rounded-2xl p-6 bg-white"
+            className="flex flex-col gap-4 md:gap-0 md:flex-row justify-between items-center p-4 md:hover:border-2 border-yellow-600 rounded-lg h-[100px] md:h-[80px] group"
           >
-            <h3 className="text-xl font-semibold text-blue-600 min-w-[300px]">
+            {/* 카테고리 이름 */}
+            <h3 className="text-xl md:text-2xl font-extrabold text-white min-w-[250px] text-center md:text-left group-hover:text-yellow-600">
               {category}
             </h3>
-            <ul className="flex gap-6">
+
+            {/* 아이콘 리스트 */}
+            <ul className="flex flex-wrap gap-6 justify-center md:justify-end min-w-[330px]">
               {items.map(({ name, img }) => (
-                <li key={name}>
+                <li
+                  key={name}
+                  className="px-4 py-2 bg-white rounded-lg group flex flex-col items-center justify-center min-h-[40px] md:min-h-[56px]"
+                >
                   <Image
                     src={img}
                     alt={name}
-                    width={80}
-                    height={80}
-                    className="w-17 h-17 object-contain"
+                    width={40}
+                    height={40}
+                    className="w-6 md:w-10 h-auto object-contain group-hover:hidden"
                   />
+                  <span className="hidden group-hover:block text-sm font-bold text-center text-black">
+                    {name}
+                  </span>
                 </li>
               ))}
             </ul>

@@ -9,8 +9,8 @@ const Hero = () => {
     >
       {/* 배경 이미지 */}
       <Image
-        src="/images/Hero.jpg"
-        alt="Developer"
+        src="/images/Hero_background.jpg"
+        alt="hero"
         fill
         className="object-cover"
         priority
@@ -42,17 +42,6 @@ const Hero = () => {
           </Link>
         </div>
       </div>
-
-      {/* 이미지 부분 */}
-      {/* <div className="mt-8 md:mt-0 md:w-1/2 flex justify-center">
-        <Image
-          src="/images/Hero.jpg"
-          alt="Developer Image"
-          width={400}
-          height={400}
-          className="w-full max-w-md rounded-lg shadow-lg"
-        />
-      </div> */}
     </section>
   );
 };

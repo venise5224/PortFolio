@@ -1,19 +1,21 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
+import Header from "@/components/layout/Header";
 
 export const metadata: Metadata = {
-  title: "JSM Portfolio",
-  description: "Frontend Developer JSM Portfolio",
+  title: "Jeon Sangmin | Front-End Developer",
+  description: "전상민(Jeon Sangmin) - Front-End 개발자 포트폴리오",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

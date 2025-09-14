@@ -18,10 +18,10 @@ const Project = () => {
       githubUrl: "https://github.com/sprint-9-3/albaform",
       techStack: ["Next.js", "TypeScript", "Tailwind", "Jotai"],
       troubles: [
-        "근무지 위치 입력이 부정확할 수 있어 카카오맵 API을 활용해 직관적이고 정확한 위치 선택 UX 제공",
-        "모달 컴포넌트를 전역적으로 구현하여 중복 코드 제거 및 유지보수성 향상",
-        "React Hook Form + Zod를 활용해 복잡한 폼 검증 로직 단순화 및 가독성 개선",
-        "OAuth 기반 간편 로그인 기능으로 사용자 편의성 강화",
+        "KakaoMap API를 활용한 위치 선택 기능 구현 → 입력 오류 방지 및 UX 향상",
+        "전역 모달 컴포넌트 설계 → 중복 제거 및 유지보수 효율화",
+        "React Hook Form + Zod 도입 → 폼 검증 로직 간결화 및 가독성 개선",
+        "OAuth 기반 간편 로그인 기능 구현 → 로그인 UX 개선 및 사용자 이탈률 감소",
       ],
     },
     {
@@ -35,10 +35,10 @@ const Project = () => {
       githubUrl: "https://github.com/codeit9-temporary/linkbrary",
       techStack: ["Next.js", "TypeScript", "Tailwind", "Zustand"],
       troubles: [
-        "로그인 상태에 따른 동적 페이지 구성을 위해 Zustand 기반 전역 상태 관리 적용",
-        "SNS 공유 기능(카카오톡, X, 메타)을 구현해 서비스 확장성 강화",
-        "간편 로그인 기능으로 회원가입과 로그인 과정을 단일화해 UX 개선",
-        "SEO 최적화를 위해 페이지별 메타데이터 작성 및 구글 서치콘솔 등록",
+        "로그인 상태 전역 관리(Zustand)로 사용자별 동적 페이지 제공 → UX 개선",
+        "카카오톡, X, 메타 공유 기능 구현 → 콘텐츠 확산 및 서비스 확장성 향상",
+        "간편 로그인 로직 개선 → 로그인 및 회원가입 절차 단일화로 사용자 이탈률 감소",
+        "페이지별 메타데이터 작성 및 Google Search Console 등록 → 검색 노출 최적화",
       ],
     },
     {
@@ -50,11 +50,13 @@ const Project = () => {
       imageUrl: "/images/GodLife_Thumbnail.png",
       link: "https://god-life.vercel.app/",
       githubUrl: "https://github.com/venise5224/GodLife",
-      techStack: ["Next.js", "TypeScript", "Tailwind", "Zustand"],
+      techStack: ["Next.js", "TypeScript", "Tailwind", "Zustand", "Firebase"],
       troubles: [
-        "로그인 상태에 따른 동적 페이지 구성을 위해 Zustand 기반 전역 상태 관리 적용",
-        "간편 로그인 기능으로 회원가입과 로그인 과정을 단일화해 UX 개선",
-        "SEO 최적화를 위해 페이지별 메타데이터 작성 및 구글 서치콘솔 등록",
+        "검색 엔진 최적화를 위해 사이트맵, 메타태그, Google/네이버 소유권 인증 적용 → 검색 노출 향상",
+        "SSR 환경에서 발생한 hydration mismatch 문제 대응 → 시간 정규화 로직 도입으로 배포 오류 방지",
+        "Firebase Authentication 연동 → 이메일/비밀번호 및 Google 간편 로그인 기능 구현으로 UX 개선",
+        "모바일 환경 대응을 위해 767px 이하에서 탭 기반 반응형 레이아웃 설계 → 전 기능 접근 가능",
+        "활동 계획과 기록을 시각화한 타임라인 UI 설계 → 사용자 몰입도 향상 및 일과 기록 흐름 개선",
       ],
     },
   ];

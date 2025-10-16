@@ -4,7 +4,8 @@ export interface ProjectType {
   period: string;
   description: string;
   imageUrl: string;
-  link: string;
+  link?: string;
+  qrCode?: string;
   githubUrl: string;
   techStack: string[];
   troubles: string[];

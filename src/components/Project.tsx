@@ -44,7 +44,7 @@ const Project = () => {
     {
       title: "GodLife",
       type: "개인",
-      period: "2025.08 ~ 2024.09",
+      period: "2025.08 ~ 2025.09",
       description:
         "갓생러를 위한, 갓생러에 의한, 갓생러의 앱. 매일의 루틴을 기록하고, 시간을 어떻게 사용했는지 한눈에 파악하세요.",
       imageUrl: "/images/GodLife_Thumbnail.png",
@@ -57,6 +57,22 @@ const Project = () => {
         "Firebase Authentication 연동 → 이메일/비밀번호 및 Google 간편 로그인 기능 구현으로 UX 개선",
         "모바일 환경 대응을 위해 767px 이하에서 탭 기반 반응형 레이아웃 설계 → 전 기능 접근 가능",
         "활동 계획과 기록을 시각화한 타임라인 UI 설계 → 사용자 몰입도 향상 및 일과 기록 흐름 개선",
+      ],
+    },
+    {
+      title: "GodLife-app",
+      type: "개인",
+      period: "2025.09 ~ 2025.10",
+      description:
+        "갓생러를 위한, 갓생러에 의한, 갓생러의 앱. 매일의 루틴을 기록하고, 시간을 어떻게 사용했는지 한눈에 파악하세요.",
+      imageUrl: "/images/GodLifeLogo.png",
+      qrCode: "/images/GodLife-app-QR.png",
+      githubUrl: "https://github.com/venise5224/GodLife-app",
+      techStack: ["React Native (Expo)", "TypeScript", "Tailwind", "Zustand"],
+      troubles: [
+        "웹의 시맨틱 태그를 사용할 수 없어, RN 컴포넌트로 View, Text 등 재작성",
+        "Next.js의 라우팅 구조를 그대로 사용할 수 없어, React Navigation (Stack, Tab) 도입",
+        "웹처럼 스타일링을 위해 Tailwind RN 도입",
       ],
     },
   ];

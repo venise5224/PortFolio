@@ -51,6 +51,26 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
           {project.description}
         </p>
 
+        {project.qrCode && (
+          <div className="mt-4 flex items-center gap-6">
+            <h4 className="font-semibold text-base md:text-lg text-yellow-600">
+              QR 코드
+            </h4>
+            <div className="flex flex-col items-center mt-2">
+              <span className="text-sm text-gray-500">
+                Expo Go 앱으로 스캔하세요
+              </span>
+              <Image
+                src={project.qrCode}
+                alt="QR 코드"
+                width={150}
+                height={150}
+                className="mt-2 border rounded"
+              />
+            </div>
+          </div>
+        )}
+
         {/* GitHub / 배포 URL */}
         <div className="mt-4 flex items-center gap-6">
           <h4 className="font-semibold text-base md:text-lg text-yellow-600">
@@ -64,14 +84,16 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
           >
             GitHub URL
           </Link>
-          <Link
-            href={project.link}
-            target="_blank"
-            rel="noreferrer"
-            className="text-blue-600 font-bold hover:underline"
-          >
-            배포 URL
-          </Link>
+          {project.link && (
+            <Link
+              href={project.link}
+              target="_blank"
+              rel="noreferrer"
+              className="text-blue-600 font-bold hover:underline"
+            >
+              배포 URL
+            </Link>
+          )}
         </div>
 
         {/* 사용 기술 */}

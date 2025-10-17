@@ -42,7 +42,7 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
           alt={`${project.title} 상세 이미지`}
           width={600}
           height={300}
-          className="mt-2 object-cover h-[200px] md:h-[300px] min-w-[300px] rounded-lg border-2 border-black"
+          className="mt-2 object-contain h-[200px] md:h-[300px] min-w-[300px] rounded-lg border-2 border-black"
           style={{ width: "100%" }}
         />
 

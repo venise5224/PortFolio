@@ -118,7 +118,7 @@ const Project = () => {
               alt={`${project.title} 썸네일`}
               width={300}
               height={150}
-              className="object-cover rounded-lg border-2 border-black"
+              className="object-contain rounded-lg border-2 border-black"
               style={{ width: "100%", height: "180px" }}
             />
 
